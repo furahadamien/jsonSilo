@@ -8,31 +8,23 @@
 let jsonResponse = document.querySelector('#jsonResponse');
 let identifier = document.querySelector('#identifier');
 let url = document.querySelector('#url');
-let tags = document.querySelector('#tags');
-let directory = document.querySelector('#directory');
-let position = document.querySelector('#position');
+let name = document.querySelector('#name');
+let picture = document.querySelector('#picture');
 let queryBox = document.querySelector('#queryBox');
 let queryButton = document.querySelector('#queryButton');
 
-
-
-
-// Initialisation: GET the associations and display in DOM
-getAssociations(window.location.href, function(status, response) {
+// Initialisation: GET the stories and display in DOM
+getStories(window.location.href, function(status, response) {
   jsonResponse.textContent = JSON.stringify(response, null, 2);
-  // TODO: handle the case of Not Found and Bad Request
-  //let deviceId = Object.keys(response.associations)[0];
-  //let associations = response.associations[deviceId];
-  //identifier.textContent = deviceId;
-  url.textContent = associations.url;
-  tags.textContent = associations.tags;
-  directory.textContent = associations.directory;
-  position.textContent = associations.position;
+  url.textContent = stories.url;
+  name.textContent = personName.value; //stories.name ;
+ console.log(personName.value);
+  picture.textContent = stories.picture
 });
 
 
-// GET the associations
-function getAssociations(url, callback) {
+
+function getStories(url, callback) {
   let httpRequest = new XMLHttpRequest();
 
   httpRequest.onreadystatechange = function() {
