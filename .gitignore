@@ -28,3 +28,10 @@ node_modules
 .lock-wscript
 
 # Temporary files
+web
+lib
+bin
+data
+story.db
+packa*
+
