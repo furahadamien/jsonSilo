@@ -3,10 +3,6 @@
  * We believe in an open Internet of Things
  */
 
-
-const nedb = require('nedb');
-let STORY_DB = 'story.db';
-
 class StoriesManager {
   /**
    * AssociationManager constructor
@@ -19,15 +15,15 @@ class StoriesManager {
     options = options || {};
     self.database = database;
   }
+  
   retrieve(id, cb){
-    //return cb({"this":"data"}, 200)
-    let identifier = id;
     this.database.find({ _id: id }, {}, function(err, stories){
       let status = 200;
       let data = { stories: stories };
       cb(data, status);
     });
   }
+
   find (id, cb){
     this.database.find({ _id: id }, function(err, docs){
       let result= docs[0];

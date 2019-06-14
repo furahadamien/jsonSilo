@@ -14,12 +14,10 @@ router.route('/')
   });
 
   function addStory(req, res){
-    //console.log(req.body);
     let story = req.body;
     let stories = req.jsonsilo.stories;
     stories.insert(story, function(status, data){
       let response = responseHandler.prepareResponse(req, status, data);
-      console.log(response);
       res.status(status).json(response);
     });
   }

@@ -6,7 +6,6 @@
 const express = require('express');
 const path = require('path');
 const responseHandler = require('./responsehandler');
-const StoriesManager = require('../storiesmanager');
 
 let router = express.Router();
 let response = '';
@@ -16,24 +15,19 @@ router.route('/:id')
   retrieveStory(req, res);
   });
 
-  function retrieveStory(req, res){
-    switch(req.accepts(['json','html'])){
-      case 'html':
-      console.log('html', req.params.id);
-        res.sendFile(path.resolve(__dirname + '/../../web/fstories/index.html'));
-        break;
-        default:
-        console.log('json', req.body);
-          let id = req.params.id;
-          let stories = req.jsonsilo.stories;
-          console.log((stories));
-          stories.retrieve(id, function(data, status){ 
-          console.log('req.params.id', req.params.id);
-          response = responseHandler.prepareResponse(req, status, data);
-          //console.log('req.params.id', req.params.id);
-          res.status(status).json(response); 
-          });
-          break;
-    }
+function retrieveStory(req, res){
+  switch(req.accepts(['json','html'])){
+    case 'html':
+      res.sendFile(path.resolve(__dirname + '/../../web/fstories/index.html'));
+      break;
+    default:
+      let id = req.params.id;
+      let stories = req.jsonsilo.stories;
+      stories.retrieve(id, function(data, status){ 
+      response = responseHandler.prepareResponse(req, status, data);
+      res.status(status).json(response); 
+      });
+      break;
   }
+}
 module.exports = router;

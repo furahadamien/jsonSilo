@@ -8,9 +8,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const databasemanager = require('./databasemanager');
-const nedbmanager = require('./nedbmanager');
-const storiesmanager = require('./storiesmanager');
+
 
 
 const HTTP_PORT = 3000;
@@ -31,8 +29,7 @@ class JSONSilo {
 
     self.app = express();
 
-    self.database = new databasemanager(options);
-    self.stories = new storiesmanager(options, self.database);
+    //self.stories = new storiesmanager(options, self.database);
 
     self.server = http.createServer(self.app);
     self.router = express.Router();
@@ -44,8 +41,11 @@ class JSONSilo {
       next();
     });
    
-    self.app.use('/stories', require('./routes/stories'));
     //self.app.use('/images', require('./routes/images'));
+    self.app.use('/images', require('./routes/images'));
+    self.app.engine('html', require('ejs').renderFile);
+    self.app.set('view engine', 'html');
+    self.app.set('views',__dirname + '/web');
     self.app.use('/', self.router);
     self.app.use('/', express.static(path.resolve(__dirname + '/../web')));
     
