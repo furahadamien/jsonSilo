@@ -4,6 +4,9 @@ let jsonResponse = document.querySelector('#jsonResponse');
 let url = document.querySelector('#url');
 let name = document.querySelector('#name');
 let picture = document.querySelector('#picture');
+let storyUrl = document.querySelector('#storyUrl');
+let link = document.querySelector('#hyperlink');
+let text = document.querySelector('#text');
 const TEST_JSON =  {"name": {
   "type": "file",
   "value": "File",
@@ -24,10 +27,13 @@ function addStory(){
     if(httpRequest.readyState === XMLHttpRequest.DONE) {
       if(httpRequest.status == 200){
         let response = (httpRequest.responseText);
-        jsonResponse.textContent = (response);
         responseParsed = JSON.parse((response));
-        console.log(responseParsed);
+        jsonResponse.textContent = (JSON.stringify(responseParsed, null,2));
+        console.log(JSON.stringify(responseParsed, null, 2));
         url.textContent = responseParsed._links.self.href + '/' + responseParsed.stories._id;
+       text.textContent = 'your story is now available at:'
+        storyUrl.textContent = url.textContent ;
+        link.href = url.textContent;
       }
     }
   };

@@ -12,16 +12,17 @@ let name = document.querySelector('#name');
 let picture = document.querySelector('#picture');
 let queryBox = document.querySelector('#queryBox');
 let queryButton = document.querySelector('#queryButton');
+let test = document.querySelector('#test');
 
 // Initialisation: GET the stories and display in DOM
 getStories(window.location.href, function(status, response) {
   responseParsed = JSON.parse(JSON.stringify(response, null, 2));
-  jsonResponse.textContent = JSON.stringify(response, null, 2);
+  jsonResponse.textContent = JSON.stringify(response, undefined, 2);
+  console.log(JSON.stringify(response, null, 2));
   url.textContent = responseParsed._links.self.href;
   let first = Object.keys(responseParsed.stories)[0];
   name.textContent = responseParsed.stories[first].FullName;
   picture.src = '/photos/1reelyActive.jpg';
- 
 });
 
 function getStories(url, callback) {
