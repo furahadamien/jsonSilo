@@ -1,3 +1,7 @@
+
+let form = document.querySelector('#myform');
+let myButton = document.querySelector('#myButton');
+
 let queryBox = document.querySelector('#personName');
 let queryButton = document.querySelector('#queryButton');
 let jsonResponse = document.querySelector('#jsonResponse');
@@ -14,6 +18,25 @@ const TEST_JSON =  {"name": {
     "menuitem": "NONE"
   }
 }};
+
+
+myButton.addEventListener('click', function(ev){
+  var myFile = document.getElementById('myFile').files[0];
+  var oData = new FormData(form);
+  var oReq = new XMLHttpRequest();
+
+  oReq.open("POST","http://localhost:3000/images", true);
+  oReq.onload = function(oevent){
+    if(oReq.status == 200){
+      console.log('done uploadng');
+    }else{
+      console.log('not done');
+    }
+  };
+  oReq.send(oData);
+  ev.preventDefault()
+
+}, false);
 
 function addStory(){
   
@@ -48,3 +71,4 @@ function log(event){
 }
 window.addEventListener("textInput", log);
 queryButton.addEventListener('click', addStory);
+

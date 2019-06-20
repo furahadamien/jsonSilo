@@ -12,7 +12,9 @@
  var router = express.Router();
  
  var storage = multer.diskStorage({
-   destination: './uploads',
+   destination: function(req, file, callback){
+     callback(null, './uploads');
+   },
    filename: function(req, file, callback){
      callback(null, Date.now()+file.originalname);
    }
@@ -20,9 +22,9 @@
  
  var upload = multer({storage: storage}).single('myFile');
  
- router.route('/').post((req, res) => {
+ router.route('/stories').post((req, res) => {
    upload(req, res, function(err){
-     console.log("file is " ,req.file);
+     console.log(req.file);
      if(err){
        res.send("error uploading");
      }

@@ -46,6 +46,7 @@ class JSONSilo {
    
     self.app.use('/stories', require('./routes/stories'));
     self.app.use('/images', require('./routes/images'));
+    // self.app.use('/images', require(path.resolve(__dirname + '/../web/images')));
     self.app.use('/photos', express.static(path.resolve(__dirname +'/../photos')));
     self.app.use('/', self.router);
     self.app.use('/', express.static(path.resolve(__dirname + '/../web')));
