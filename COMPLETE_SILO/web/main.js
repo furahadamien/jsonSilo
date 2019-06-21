@@ -1,6 +1,4 @@
-
-let form = document.querySelector('#myform');
-let myButton = document.querySelector('#myButton');
+let form = document.querySelector('#myForm');
 
 let queryBox = document.querySelector('#personName');
 let queryButton = document.querySelector('#queryButton');
@@ -11,6 +9,9 @@ let picture = document.querySelector('#picture');
 let storyUrl = document.querySelector('#storyUrl');
 let link = document.querySelector('#hyperlink');
 let text = document.querySelector('#text');
+let linkImage = document.querySelector('#hyperlinkImage');
+let textImage = document.querySelector('#textImage');
+let imageUrl = document.querySelector('#imageUrl');
 const TEST_JSON =  {"name": {
   "type": "file",
   "value": "File",
@@ -20,7 +21,7 @@ const TEST_JSON =  {"name": {
 }};
 
 
-myButton.addEventListener('click', function(ev){
+function addImage(ev){
   var myFile = document.getElementById('myFile').files[0];
   var oData = new FormData(form);
   var oReq = new XMLHttpRequest();
@@ -28,6 +29,13 @@ myButton.addEventListener('click', function(ev){
   oReq.open("POST","http://localhost:3000/images", true);
   oReq.onload = function(oevent){
     if(oReq.status == 200){
+      let response = (oReq.responseText);
+      picture.src = `/photos/${response}`
+
+      textImage.textContent = 'your picture is now available at:'
+      imageUrl.textContent = window.location.href + `images/${response}`;
+      linkImage.href = window.location.href + `images/${response}`;
+      console.log(response);
       console.log('done uploadng');
     }else{
       console.log('not done');
@@ -36,7 +44,7 @@ myButton.addEventListener('click', function(ev){
   oReq.send(oData);
   ev.preventDefault()
 
-}, false);
+}
 
 function addStory(){
   
@@ -69,6 +77,6 @@ function addStory(){
 function log(event){
   name.textContent = queryBox.value;
 }
-window.addEventListener("textInput", log);
+window.addEventListener("keyup", log);
+queryButton.addEventListener('click', addImage);
 queryButton.addEventListener('click', addStory);
-
