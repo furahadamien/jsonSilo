@@ -46,16 +46,17 @@ res.sendFile(path.resolve(__dirname + '../../../' + `/photos/${req.params.id}`))
      }
 
      //image resizing using the sharp module
-    sharp(path.resolve(__dirname + '../../../' + `/photos/${req.file.originalname}`)).resize(300, 300).toBuffer(function(err, buffer) {
-      if(err){
-        console.log("this is the error ",err);
-      }
-      else{
-        console.log("images resized");
-        fs.writeFile(path.resolve(__dirname + '../../../' + `/photos/${req.file.originalname}`), buffer, function(e) {
-        });
-      }
-    });
+    sharp(path.resolve(__dirname + '../../../' + `/photos/${req.file.originalname}`))
+      .resize(300, 300).toBuffer(function(err, buffer) {
+        if(err){
+          console.log("this is the error ",err);
+        }
+        else{
+          console.log("images resized");
+          fs.writeFile(path.resolve(__dirname + '../../../' + `/photos/${req.file.originalname}`), buffer, function(e) {
+          });
+        }
+      });
     res.end(req.file.originalname);
    });
 

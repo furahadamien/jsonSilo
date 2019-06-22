@@ -26,7 +26,7 @@ function addImage(ev){
   var oData = new FormData(form);
   var oReq = new XMLHttpRequest();
 
-  oReq.open("POST","http://localhost:3000/images", true);
+  oReq.open("POST","/images", true);
   oReq.onload = function(oevent){
     if(oReq.status == 200){
       let response = (oReq.responseText);
@@ -69,7 +69,7 @@ function addStory(){
     }
   };
 
-  httpRequest.open('POST', 'http://localhost:3000/stories');
+  httpRequest.open('POST', '/stories');
   httpRequest.setRequestHeader('Content-Type', 'application/json');
   httpRequest.setRequestHeader('Accept', 'application/json');
   httpRequest.send(JSON.stringify(dictstring));

@@ -22,7 +22,8 @@ getStories(window.location.href, function(status, response) {
   url.textContent = responseParsed._links.self.href;
   let first = Object.keys(responseParsed.stories)[0];
   name.textContent = responseParsed.stories[first].FullName;
-  picture.src = '/photos/1reelyActive.jpg';
+  console.log(window.location.origin);
+  picture.src = window.location.origin + '/images/1reelyActive.png';
 });
 
 function getStories(url, callback) {
@@ -36,3 +37,4 @@ function getStories(url, callback) {
   httpRequest.setRequestHeader('Accept', 'application/json');
   httpRequest.send();
 }
+//fucntion getImage()
