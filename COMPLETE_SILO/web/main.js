@@ -1,5 +1,4 @@
 let form = document.querySelector('#myForm');
-
 let queryBox = document.querySelector('#personName');
 let queryButton = document.querySelector('#queryButton');
 let jsonResponse = document.querySelector('#jsonResponse');
@@ -12,6 +11,7 @@ let text = document.querySelector('#text');
 let linkImage = document.querySelector('#hyperlinkImage');
 let textImage = document.querySelector('#textImage');
 let imageUrl = document.querySelector('#imageUrl');
+let error = document.querySelector('#error');
 const TEST_JSON =  {"name": {
   "type": "file",
   "value": "File",
@@ -20,39 +20,37 @@ const TEST_JSON =  {"name": {
   }
 }};
 
-
 function addImage(ev){
-  var myFile = document.getElementById('myFile').files[0];
-  var oData = new FormData(form);
-  var oReq = new XMLHttpRequest();
+  let myFile = document.getElementById('myFile').files[0];
+  let Data = new FormData(form);
+  let Req = new XMLHttpRequest();
 
-  oReq.open("POST","/images", true);
-  oReq.onload = function(oevent){
-    if(oReq.status == 200){
-      let response = (oReq.responseText);
+  Req.open("POST","/images", true);
+  Req.onload = function(oevent){
+    //console.log(Req.status);
+    if(Req.status == 200){
+      let response = (Req.responseText);
       picture.src = `/photos/${response}`
-
       textImage.textContent = 'your picture is now available at:'
       imageUrl.textContent = window.location.href + `images/${response}`;
       linkImage.href = window.location.href + `images/${response}`;
-      console.log(response);
-      console.log('done uploadng');
-    }else{
-      console.log('not done');
+    }else if(Req.status == 204){
+      error.textContent = 'wrong file format';
+    }
+    else{
+      textImage.textContent = 'something went wrong while uploading image';
     }
   };
-  oReq.send(oData);
+ 
+  Req.send(Data);
   ev.preventDefault()
-
 }
 
-function addStory(){
-  
-  var dictstring = '';
+function addStory(){ 
+  let dictstring = '';
   let httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function(){
-
-    var dict = {"FullName" : queryBox.value };
+    let dict = {"FullName" : queryBox.value };
     dict = JSON.stringify(dict);
     dictstring = JSON.parse(dict);
     if(httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -62,7 +60,7 @@ function addStory(){
         jsonResponse.textContent = (JSON.stringify(responseParsed, null,2));
         console.log(JSON.stringify(responseParsed, null, 2));
         url.textContent = responseParsed._links.self.href + '/' + responseParsed.stories._id;
-       text.textContent = 'your story is now available at:'
+        text.textContent = 'your story is now available at:'
         storyUrl.textContent = url.textContent ;
         link.href = url.textContent;
       }

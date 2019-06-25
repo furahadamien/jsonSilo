@@ -13,6 +13,7 @@ let picture = document.querySelector('#picture');
 let queryBox = document.querySelector('#queryBox');
 let queryButton = document.querySelector('#queryButton');
 let test = document.querySelector('#test');
+let pictureName = "";
 
 // Initialisation: GET the stories and display in DOM
 getStories(window.location.href, function(status, response) {
@@ -37,4 +38,3 @@ function getStories(url, callback) {
   httpRequest.setRequestHeader('Accept', 'application/json');
   httpRequest.send();
 }
-//fucntion getImage()
