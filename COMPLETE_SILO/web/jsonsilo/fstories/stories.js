@@ -19,11 +19,9 @@ let pictureName = "";
 getStories(window.location.href, function(status, response) {
   responseParsed = JSON.parse(JSON.stringify(response, null, 2));
   jsonResponse.textContent = JSON.stringify(response, undefined, 2);
-  console.log(JSON.stringify(response, null, 2));
   url.textContent = responseParsed._links.self.href;
   let first = Object.keys(responseParsed.stories)[0];
   name.textContent = responseParsed.stories[first].FullName;
-  console.log(window.location.origin);
   picture.src = window.location.origin + '/images/1reelyActive.png';
 });
 

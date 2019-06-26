@@ -1,3 +1,8 @@
+/**
+ * Copyright reelyActive 2015-2019
+ * We believe in an open Internet of Things
+ */
+
 let form = document.querySelector('#myForm');
 let queryBox = document.querySelector('#personName');
 let queryButton = document.querySelector('#queryButton');
@@ -12,6 +17,7 @@ let linkImage = document.querySelector('#hyperlinkImage');
 let textImage = document.querySelector('#textImage');
 let imageUrl = document.querySelector('#imageUrl');
 let error = document.querySelector('#error');
+let imageName = '';
 const TEST_JSON =  {"name": {
   "type": "file",
   "value": "File",
@@ -27,13 +33,14 @@ function addImage(ev){
 
   Req.open("POST","/images", true);
   Req.onload = function(oevent){
-    //console.log(Req.status);
     if(Req.status == 200){
       let response = (Req.responseText);
       picture.src = `/photos/${response}`
       textImage.textContent = 'your picture is now available at:'
       imageUrl.textContent = window.location.href + `images/${response}`;
       linkImage.href = window.location.href + `images/${response}`;
+      imageName = response;
+      console.log(imageName);
     }else if(Req.status == 204){
       error.textContent = 'wrong file format';
     }
@@ -41,7 +48,7 @@ function addImage(ev){
       textImage.textContent = 'something went wrong while uploading image';
     }
   };
- 
+  console.log(imageName);
   Req.send(Data);
   ev.preventDefault()
 }
@@ -50,7 +57,7 @@ function addStory(){
   let dictstring = '';
   let httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function(){
-    let dict = {"FullName" : queryBox.value };
+    let dict = {"FullName" : queryBox.value};
     dict = JSON.stringify(dict);
     dictstring = JSON.parse(dict);
     if(httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -58,7 +65,6 @@ function addStory(){
         let response = (httpRequest.responseText);
         responseParsed = JSON.parse((response));
         jsonResponse.textContent = (JSON.stringify(responseParsed, null,2));
-        console.log(JSON.stringify(responseParsed, null, 2));
         url.textContent = responseParsed._links.self.href + '/' + responseParsed.stories._id;
         text.textContent = 'your story is now available at:'
         storyUrl.textContent = url.textContent ;
