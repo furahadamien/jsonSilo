@@ -22,7 +22,9 @@ getStories(window.location.href, function(status, response) {
   url.textContent = responseParsed._links.self.href;
   let first = Object.keys(responseParsed.stories)[0];
   name.textContent = responseParsed.stories[first].FullName;
-  picture.src = window.location.origin + '/images/1reelyActive.png';
+  let imageUrl = responseParsed.stories[first].imageUrl;
+  console.log(imageUrl);
+  picture.src = imageUrl;//window.location.origin + `/images/${imageUrl}`;
 });
 
 function getStories(url, callback) {

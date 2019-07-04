@@ -5,8 +5,11 @@ json-silo
 Installation
 ------------
 
-    npm install json-silo
+    npm install
 
+run
+------------
+    npm start
 
 What's in a name?
 -----------------

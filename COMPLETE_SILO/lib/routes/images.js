@@ -41,7 +41,11 @@ router.route('/').post((req, res) => {
   upload(req, res, (err) => {
     if(err){
       res.status(204).end(); //No Content
-    }else{
+    }
+    else if(req.file == undefined){
+      res.status(422).end();
+    }
+    else{
     //image resizing using the sharp module
       sharp(path.resolve(__dirname + '../../../' + `/photos/${req.file.originalname}`))
       .resize(300, 300).toBuffer(function(err, buffer) {

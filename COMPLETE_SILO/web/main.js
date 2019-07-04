@@ -17,62 +17,49 @@ let linkImage = document.querySelector('#hyperlinkImage');
 let textImage = document.querySelector('#textImage');
 let imageUrl = document.querySelector('#imageUrl');
 let error = document.querySelector('#error');
-let imageName = ' ';
-const TEST_JSON =  {"name": {
-  "type": "file",
-  "value": "File",
-  "popup": {
-    "menuitem": "NONE"
-  }
-}};
+
 let dictstring = '';
 let dict = {"FullName" : '',
-    "image" : ""};
+    "imageUrl" : ""};
 
-function addImage(ev){
+function addImage(callback){
   let myFile = document.getElementById('myFile').files[0];
   let Data = new FormData(form);
   let Req = new XMLHttpRequest();
-
+  let ans = '';
   Req.open("POST","/images", true);
-  imageName = Req.responseText;
-  console.log('first');
   Req.onload = function(oevent){
-    console.log(Req.status);
     if(Req.status == 200){
       let response = (Req.responseText);
       picture.src = `/photos/${response}`
       textImage.textContent = 'your picture is now available at:'
       imageUrl.textContent = window.location.href + `images/${response}`;
       linkImage.href = window.location.href + `images/${response}`;
-      imageName = response;
-      dict.image = response;
-      //dict = JSON.stringify(dict);
-      dictstring = JSON.parse(dict);
-      
-      
+      dict.imageUrl = window.location.href + `images/${response}`;
+      dict.FullName = queryBox.value;
+      dict = JSON.stringify(dict);
+      dictstring = JSON.parse(dict); 
+      ans = response;
+      error.textContent = '';
+      callback(ans);
     }else if(Req.status == 204){
       error.textContent = 'wrong file format';
+    }else if(Req.status == 422){
+      error.textContent = 'We could not detect any file';
     }
     else{
       textImage.textContent = 'something went wrong while uploading image';
-    }
+    } 
   };
-  Req.send(Data);
-  ev.preventDefault()
-}
-
-function addStory(){ 
-  
+  Req.send(Data);   
+} 
+function addStory(ans){ 
   let httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function(){
-    dict.FullName = queryBox.value;
-    //console.log(imageName);
-    console.log(dict.FullName);
-    dict = JSON.stringify(dict);
-    dictstring = JSON.parse(dict);
     if(httpRequest.readyState === XMLHttpRequest.DONE) {
       if(httpRequest.status == 200){
+        dict = JSON.stringify(dict);
+        dictstring = JSON.parse(dict);
         let response = (httpRequest.responseText);
         responseParsed = JSON.parse((response));
         jsonResponse.textContent = (JSON.stringify(responseParsed, null,2));
@@ -83,7 +70,6 @@ function addStory(){
       }
     }
   };
-
   httpRequest.open('POST', '/stories');
   httpRequest.setRequestHeader('Content-Type', 'application/json');
   httpRequest.setRequestHeader('Accept', 'application/json');
@@ -92,8 +78,9 @@ function addStory(){
 function log(event){
   name.textContent = queryBox.value;
 }
+
+function publishStory(){
+  addImage(addStory);
+}
 window.addEventListener("keyup", log);
-
-queryButton.addEventListener('click', addImage);
-queryButton.addEventListener('click', addStory);
-
+queryButton.addEventListener('click',publishStory);
