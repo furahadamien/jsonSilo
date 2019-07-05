@@ -1,5 +1,5 @@
 /**
-  * Copyright reelyActive 2019
+  * Copyright reelyActive 2019-2019
   * We believe in an open Internet of Things
   */
 
@@ -40,10 +40,10 @@ router.route('/:id').get((req, res) => {
 router.route('/').post((req, res) => {
   upload(req, res, (err) => {
     if(err){
-      res.status(204).end(); //No Content
+      res.status(204).end(); //wrong file format 
     }
     else if(req.file == undefined){
-      res.status(422).end();
+      res.status(422).end();//No file chosen
     }
     else{
     //image resizing using the sharp module

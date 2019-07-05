@@ -23,8 +23,7 @@ getStories(window.location.href, function(status, response) {
   let first = Object.keys(responseParsed.stories)[0];
   name.textContent = responseParsed.stories[first].FullName;
   let imageUrl = responseParsed.stories[first].imageUrl;
-  console.log(imageUrl);
-  picture.src = imageUrl;//window.location.origin + `/images/${imageUrl}`;
+  picture.src = imageUrl;
 });
 
 function getStories(url, callback) {
