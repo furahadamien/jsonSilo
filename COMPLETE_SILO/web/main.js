@@ -12,11 +12,8 @@ let url = document.querySelector('#url');
 let name = document.querySelector('#name');
 let picture = document.querySelector('#picture');
 let storyUrl = document.querySelector('#storyUrl');
-let link = document.querySelector('#hyperlink');
 let text = document.querySelector('#text');
-let linkImage = document.querySelector('#hyperlinkImage');
 let textImage = document.querySelector('#textImage');
-let imageUrl = document.querySelector('#imageUrl');
 let error = document.querySelector('#error');
 
 // data sent to the sever
@@ -31,19 +28,15 @@ function addImage(callback){
   let myFile = document.getElementById('myFile').files[0];
   let Data = new FormData(form);
   let httpRequest = new XMLHttpRequest();
-  httpRequest.open("POST","/images", true);
   httpRequest.onload = function(oevent){
     if(httpRequest.status == 200){
-      let response = (httpRequest.responseText);
-      picture.src = `/images/${response}`
+      let response = JSON.parse(httpRequest.responseText);
+      let imageLocation = 'images/'+ response.imageName;
+      picture.src = imageLocation;
       //update the DOM
-      textImage.textContent = 'your picture is now available at:'
-      imageUrl.textContent = window.location.href + `images/${response}`;
-      linkImage.href = window.location.href + `images/${response}`;
-      story.imageUrl = window.location.href + `images/${response}`;
+      story.imageUrl = window.location.href + imageLocation;
       story.FullName = queryBox.value;
       story = JSON.stringify(story);
-      ans = response;
       error.textContent = '';
       callback();
     }else if(httpRequest.status == 204){
@@ -55,6 +48,7 @@ function addImage(callback){
       textImage.textContent = 'something went wrong while uploading image';
     } 
   };
+  httpRequest.open("POST","/images", true);
   httpRequest.send(Data);   
 } 
 
@@ -67,13 +61,12 @@ function addStory(){
     if(httpRequest.readyState === XMLHttpRequest.DONE) {
       if(httpRequest.status == 200){
         story = JSON.stringify(story);
-        let response = (httpRequest.responseText);
-        responseParsed = JSON.parse((response));
-        jsonResponse.textContent = (JSON.stringify(responseParsed, null,2));
-        url.textContent = responseParsed._links.self.href + '/' + responseParsed.stories._id;
-        text.textContent = 'your story is now available at:'
+        let response = JSON.parse(httpRequest.responseText);
+        let storyLocation = response._links.self.href + '/' + response.stories._id;
+        jsonResponse.textContent = (JSON.stringify(response, null,2));
+        url.textContent = storyLocation;
+        story.storyLocation = url.textContent;
         storyUrl.textContent = url.textContent ;
-        link.href = url.textContent;
       }
     }
   };
@@ -83,7 +76,7 @@ function addStory(){
   httpRequest.send(story);
 }
 
-function log(event){
+function log(){
   name.textContent = queryBox.value;
 }
 

@@ -5,26 +5,27 @@
 
 const multer = require('multer');
 const path = require('path');
+const sharp = require('sharp');
+const fs = require('fs');
 
 class ImagesManager {
   /**
   * ImagesManager constructor
-  * Manages the persistent JSON entries
   * @param {Object} options The options as a JSON object.
   * @constructor
   */
   constructor(options) {
     let self = this;
     options = options || {};
-    self.storage = multer.diskStorage({
+    self.storage = multer.diskStorage({ //multer image storage
       destination: './images',
       filename: function(req, file, callback){
         callback(null, file.originalname);
       }
     });
-     self.upload = multer({storage: self.storage,
+  
+     self.upload = multer({storage: self.storage, //multer image upload
       fileFilter: function(req, file, cb){
-        //validate file type
         const filetypes = /jpeg|jpg|png|gif|tiff|psd/;
         const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
         const mimetype = filetypes.test(file.mimetype); 
@@ -36,6 +37,25 @@ class ImagesManager {
         } 
       }
     }).single('myFile');
+  }
+  
+
+  /**
+   * Resizing at the given path
+   * @param {String} imagePath 
+   */
+  resize(imagePath){
+    sharp(imagePath)
+      .resize(300, 300).toBuffer(function(err, buffer) {
+        if(err){
+          res.send(err);
+        }
+        else{
+          fs.writeFile(imagePath,
+            buffer, function(e) {
+          });
+        }
+      });
   }
 }
 module.exports = ImagesManager;
