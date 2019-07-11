@@ -11,6 +11,7 @@ const fs = require('fs');
 const databasemanager = require('./databasemanager');
 const nedbmanager = require('./nedbmanager');
 const storiesmanager = require('./storiesmanager');
+const imagesmanager = require('./imagesmanager');
 const multer = require('multer');
 
 
@@ -34,13 +35,7 @@ class JSONSilo {
 
     self.database = new databasemanager(options);
     self.stories = new storiesmanager(options, self.database);
-    self.storage = multer.diskStorage({
-        destination: './images',
-        filename: function(req, file, callback){
-          callback(null, file.originalname);
-        }
-      });
-
+    self.images = new imagesmanager(options);
     self.server = http.createServer(self.app);
     self.router = express.Router();
 

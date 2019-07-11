@@ -13,6 +13,11 @@ router.route('/')
     addStory(req, res);
   });
 
+  /**
+   * Add story to the database
+   * @param {String} req the HTTP request
+   * @param {String} res the HTTP result
+   */
   function addStory(req, res){
     let story = req.body;
     let stories = req.jsonsilo.stories;
@@ -27,6 +32,11 @@ router.route('/:id')
   retrieveStory(req, res);
   });
 
+  /**
+   * Retrieve story from the database
+   * @param {String} req the HTTP request
+   * @param {Strng} res the HTTP result
+   */
 function retrieveStory(req, res){
   switch(req.accepts(['json','html'])){
     case 'html':
