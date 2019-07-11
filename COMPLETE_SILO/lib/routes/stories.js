@@ -16,13 +16,11 @@ router.route('/')
   function addStory(req, res){
     let story = req.body;
     let stories = req.jsonsilo.stories;
-    stories.insert(story, function(status, data){
+    stories.create(story, function(status, data){
       let response = responseHandler.prepareResponse(req, status, data);
       res.status(status).json(response);
     });
   }
-
-  let response = '';
 
 router.route('/:id')
   .get(function(req, res) { 
@@ -32,13 +30,13 @@ router.route('/:id')
 function retrieveStory(req, res){
   switch(req.accepts(['json','html'])){
     case 'html':
-      res.sendFile(path.resolve(__dirname + '/../../web/jsonsilo/fstories/index.html'));
+      res.sendFile(path.resolve(__dirname + '/../../web/jsonsilo/stories/index.html'));
       break;
     default:
       let id = req.params.id;
       let stories = req.jsonsilo.stories;
       stories.retrieve(id, function(data, status){ 
-      response = responseHandler.prepareResponse(req, status, data);
+      let response = responseHandler.prepareResponse(req, status, data);
       res.status(status).json(response); 
       });
       break;

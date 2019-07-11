@@ -27,6 +27,12 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-# Temporary files
+# static folders
+photos
+imageUploads
+
+
+
+
 
 

@@ -8,7 +8,7 @@ const nedb = require('nedb');
 
 
 const DEFAULT_DATA_FOLDER = 'data';
-const DEFAULT_STORY_DB = 'story.db';
+const DEFAULT_STORY_DB = 'stories.db';
 
 
 /**

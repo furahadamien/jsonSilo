@@ -11,6 +11,7 @@ const fs = require('fs');
 const databasemanager = require('./databasemanager');
 const nedbmanager = require('./nedbmanager');
 const storiesmanager = require('./storiesmanager');
+const multer = require('multer');
 
 
 const HTTP_PORT = 3000;
@@ -33,6 +34,12 @@ class JSONSilo {
 
     self.database = new databasemanager(options);
     self.stories = new storiesmanager(options, self.database);
+    self.storage = multer.diskStorage({
+        destination: './images',
+        filename: function(req, file, callback){
+          callback(null, file.originalname);
+        }
+      });
 
     self.server = http.createServer(self.app);
     self.router = express.Router();
@@ -46,8 +53,6 @@ class JSONSilo {
    
     self.app.use('/stories', require('./routes/stories'));
     self.app.use('/images', require('./routes/images'));
-    // self.app.use('/images', require(path.resolve(__dirname + '/../web/images')));
-    self.app.use('/photos', express.static(path.resolve(__dirname +'/../photos')));
     self.app.use('/', self.router);
     self.app.use('/', express.static(path.resolve(__dirname + '/../web')));
     

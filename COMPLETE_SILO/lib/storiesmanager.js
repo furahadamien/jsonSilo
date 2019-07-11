@@ -6,7 +6,7 @@
 
 class StoriesManager {
   /**
-  * AssociationManager constructor
+  * StoriesManager constructor
   * Manages the persistent JSON entries
   * @param {Object} options The options as a JSON object.
   * @constructor
@@ -17,7 +17,13 @@ class StoriesManager {
     self.database = database;
     self.identifierLength = options.identifierLength;
   }
-  insert(story, callback){
+
+  /**
+   * Create a new story
+   * @param {String} story The story to send to database
+   * @param {callback} callback Function to call on completion
+   */
+  create(story, callback){
     this.database.insert(story,function(err, newDoc){
       if(err) {
         return callback(400);
@@ -28,22 +34,16 @@ class StoriesManager {
     });
   }
 
-  retrieve(id, cb){
+  /**
+   * Retrieve an existing story
+   * @param {String} id The id of the story
+   * @param {callBack} callback Function to call on completion
+   */
+  retrieve(id, callback){
     this.database.find({ _id: id }, {}, function(err, stories){
       let status = 200;
       let data = { stories: stories };
-      cb(data, status);
-    });
-  }
-
-  find (id, cb){
-    this.database.find({ _id: id }, function(err, docs){
-      let result= docs[0];
-      let json = {};
-      if(result != null){
-        json = result.json;
-      }
-      cb(json);
+      callback(data, status);
     });
   }
 }

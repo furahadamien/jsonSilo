@@ -3,6 +3,7 @@
  * We believe in an open Internet of Things
  */
 
+ //DOM elements
 let form = document.querySelector('#myForm');
 let queryBox = document.querySelector('#personName');
 let queryButton = document.querySelector('#queryButton');
@@ -18,48 +19,54 @@ let textImage = document.querySelector('#textImage');
 let imageUrl = document.querySelector('#imageUrl');
 let error = document.querySelector('#error');
 
-let dictstring = '';
-let dict = {"FullName" : '',
-    "imageUrl" : ""};
+// data sent to the sever
+let story = {"FullName" : '',
+    "imageUrl" : ""}; 
 
+/**
+ * Uploads an image to the file system
+ * @param {callback} callback Function to call upon completion
+ */
 function addImage(callback){
   let myFile = document.getElementById('myFile').files[0];
   let Data = new FormData(form);
-  let Req = new XMLHttpRequest();
-  let ans = '';
-  Req.open("POST","/images", true);
-  Req.onload = function(oevent){
-    if(Req.status == 200){
-      let response = (Req.responseText);
-      picture.src = `/photos/${response}`
+  let httpRequest = new XMLHttpRequest();
+  httpRequest.open("POST","/images", true);
+  httpRequest.onload = function(oevent){
+    if(httpRequest.status == 200){
+      let response = (httpRequest.responseText);
+      picture.src = `/images/${response}`
+      //update the DOM
       textImage.textContent = 'your picture is now available at:'
       imageUrl.textContent = window.location.href + `images/${response}`;
       linkImage.href = window.location.href + `images/${response}`;
-      dict.imageUrl = window.location.href + `images/${response}`;
-      dict.FullName = queryBox.value;
-      dict = JSON.stringify(dict);
-      dictstring = JSON.parse(dict); 
+      story.imageUrl = window.location.href + `images/${response}`;
+      story.FullName = queryBox.value;
+      story = JSON.stringify(story);
       ans = response;
       error.textContent = '';
-      callback(ans);
-    }else if(Req.status == 204){
+      callback();
+    }else if(httpRequest.status == 204){
       error.textContent = 'wrong file format';
-    }else if(Req.status == 422){
+    }else if(httpRequest.status == 422){
       error.textContent = 'We could not detect any file';
     }
     else{
       textImage.textContent = 'something went wrong while uploading image';
     } 
   };
-  Req.send(Data);   
+  httpRequest.send(Data);   
 } 
-function addStory(ans){ 
+
+/**
+ * Obtains story and sends it to the database
+ */
+function addStory(){ 
   let httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function(){
     if(httpRequest.readyState === XMLHttpRequest.DONE) {
       if(httpRequest.status == 200){
-        dict = JSON.stringify(dict);
-        dictstring = JSON.parse(dict);
+        story = JSON.stringify(story);
         let response = (httpRequest.responseText);
         responseParsed = JSON.parse((response));
         jsonResponse.textContent = (JSON.stringify(responseParsed, null,2));
@@ -73,8 +80,9 @@ function addStory(ans){
   httpRequest.open('POST', '/stories');
   httpRequest.setRequestHeader('Content-Type', 'application/json');
   httpRequest.setRequestHeader('Accept', 'application/json');
-  httpRequest.send(JSON.stringify(dictstring));
+  httpRequest.send(story);
 }
+
 function log(event){
   name.textContent = queryBox.value;
 }

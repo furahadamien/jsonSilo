@@ -1,3 +1,4 @@
+{"FullName":"fgrfdsd","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.24.36.png","_id":"04Oibh56dnmocsKq"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"08Qgw6V1E2FDIY4Y"}
 {"FullName":"afdsfghjkl","imageUrl":"http://localhost:3000/images/31530099.jpg","_id":"0AHozvCvOt3ntq2t"}
 {"FullName":"","_id":"0OaS88u6I9bI3FJo"}
@@ -5,6 +6,7 @@
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"0beAsFHRIbcC3WRA"}
 {"FullName":"asdfggfd","image":"none","_id":"0irokmatCWTGCtXM"}
 {"_id":"1/undefined"}
+{"FullName":"rghlwjfdlsgf","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-02 at 18.07.35.png","_id":"18P56PqrIBxdww17"}
 {"FullName":"furaha damien","_id":"18xDT0iHtGMrUKPj"}
 {"FullName":"sdfghjgfd","_id":"1HIaGJHn4d3csYn5"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"1b89bhzL72FFlyRw"}
@@ -12,6 +14,7 @@
 {"FullName":"furaha ","_id":"1l0iJM0AXvvxDbai"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"1rgNu5oP4kYxSPZZ"}
 {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"1t57iIJUpiDZNzMn"}
+{"FullName":"sdfggfdsad","imageUrl":"http://localhost:3000/images/furaha-bubble.jpg","_id":"1zDeN2XY4vabjoyV"}
 {"FullName":"sdfggfd","imageUrl":"damen","_id":"1zdNyW3KevUMTvre"}
 {"FullName":"","_id":"23XOs6vOYLq96EWU"}
 {"story":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"23pXGUan2ztTDLBY"}
@@ -26,6 +29,7 @@
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"3ChquNBSBHezwp5X"}
 {"FullName":"","_id":"3FnuymHsVAUFg57x"}
 {"FullName":"asdfghjkhgf","image":"1reelyActive.png","_id":"3LRlv9r522Y3s3NP"}
+{"FullName":"fghlujyhtgrfe","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"3Q9syrHvLvlG3DLA"}
 {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"3cNxDQxIRZ3VygJX"}
 {"story":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"3cunwJtcR9UQwcNR"}
 {"FullName":"furaha damien","_id":"3mBtY7wi2O0UIACr"}
@@ -44,6 +48,7 @@
 {"_id":"5WQTarUpwTmCus4g"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"5iJdBv1x4LpLPXXs"}
 {"_id":"5lGVR9RJCaw9ENAB"}
+{"FullName":"sadfgrfdsa","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"5uP3C91yPBAIYAec"}
 {"FullName":"sdfgfd","imageUrl":"damien","_id":"5z3BZvYG66ApnIfI"}
 {"FullName":"futysyirdytfkuygh","_id":"62sBfK6qPYAWVxRX"}
 {"FullName":"","_id":"66rsMEJ5HYEv8j81"}
@@ -86,6 +91,7 @@
 {"_id":"BRQXasmh4ui7wFFY"}
 {"FullName":"","_id":"BkU4cfreQA1rxwMB"}
 {"_id":"BlGgx0XLgbuOvJC8"}
+{"FullName":"fghjl/lujyhtgrf","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.45.24.png","_id":"BpwvrCz0HHicjqCa"}
 {"FullName":"sdfghhgf","_id":"BsmaT8UB5Gjb0EEa"}
 {"FullName":"","_id":"Bx1ptnlL9eZRylWj"}
 {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"C2MGXNhyKlezasFX"}
@@ -93,6 +99,7 @@
 {"FullName":"","_id":"CBkFah4e3zI7Bw79"}
 {"_id":"CKlFSHuTvgrxKqPP"}
 {"FullName":"","imageUrl":"http://localhost:3000/images/1reelyActive.png","_id":"CLLkfEoYg0pzwG21"}
+{"FullName":"furaha damien","imageUrl":"http://localhost:3000/images/31530099.jpg","_id":"CMBXzjiWbcXW7uof"}
 {"FullName":"rtuyiuoip[poiuytretyui","_id":"COEid9s9WwsvbWT0"}
 {"_id":"CQeNRg06uULruCkz"}
 {"FullName":"","imageUrl":"","_id":"CWvnHBsvfxSpJVyT"}
@@ -109,8 +116,10 @@
 {"FullName":"","_id":"EKhPh1xXlzt3j12A"}
 {"FullName":"furaha","_id":"EPmTKGrdJfYqX4mv"}
 {"FullName":"","_id":"ESK5cRyfkL8WUErt"}
+{"FullName":"sdfggfdsad","imageUrl":"http://localhost:3000/images/furaha-bubble.jpg","_id":"EqjnTG2Lsn2O2Ujh"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"Ev2kH422f3MsfxqS"}
 {"name":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"EygU5eE5HyxVa0GR"}
+{"FullName":"wrerhjfsda","imageUrl":"http://localhost:3000/images/furaha.jpg","_id":"FjvzU9S5QoRWFvBj"}
 {"FullName":"","_id":"FnOA9pxa4vYmyyM4"}
 {"stories":{"name":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"G9d7pSellBwtyS5C"}
 {"_id":"G9gv9r4aVQW2y9A2"}
@@ -134,10 +143,12 @@
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"IlZGDM9hifVpz34W"}
 {"_id":"IqN24C2tAVOXmX6E"}
 {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"It9S0Orgrh6Kqz7n"}
+{"FullName":"fgrfdsd","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.24.36.png","_id":"IwWAAXD3YlUsPB3x"}
 {"FullName":"","_id":"IytxkAeX3A2MwQ2k"}
 {"FullName":"","_id":"J13g3uEXxKeChhC3"}
 {"_id":"J1GHMjEV3EZS77M8"}
 {"FullName":"sdfghjgfds","image":"","_id":"J7wYizyg2jtvIotW"}
+{"FullName":"dfghfsfdsg","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"JAuJL9MT9PZey4Na"}
 {"_id":"JGhlzaCBW6hs0Vyy"}
 {"FullName":"dfdghjhgfdsdfgh","_id":"JJsXeBKGBSEfUwd8"}
 {"FullName":"","_id":"JaD8AJquImeadSLI"}
@@ -199,6 +210,7 @@
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"QjKv3Ngbvm5Ltdxy"}
 {"_id":"Qv1VMrD79aTLYfE8"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"R4z4GIAVIdMqRCNt"}
+{"FullName":"qwertyuuytr","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.56.03.png","_id":"R8mUSr5QiAhVrh1e"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"RDkwJHckIMPip9QC"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"RPWfqhKsZSklxYtx"}
 {"FullName":"","_id":"RTqf38wXIIaGY0yy"}
@@ -220,6 +232,7 @@
 {"FullName":"asdfgfds","image":"none","_id":"U6uemBYYLqCZm5eF"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"USDjJKItHknWN8fs"}
 {"_id":"UTZz9IoRTdZVBHGq"}
+{"FullName":"sdfghjljhgf","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"UZYpwP2H7UkK327R"}
 {"FullName":"furaha damien","_id":"Utt3iO0bzerauhS2"}
 {"FullName":"asdfgfds","image":"","_id":"Ux8IJj3M4NZ90kCS"}
 {"_id":"UyEUAXVkAToDWLRb"}
@@ -265,6 +278,7 @@
 {"_id":"ZjI8YUjzkOvNwBiC"}
 {"story":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"Zjg6rAHEwrJf4olj"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"Zkgo5gD6U7FrtWci"}
+{"FullName":"furaha damien","imageUrl":"http://localhost:3000/images/1reelyActive.png","_id":"a8s6QG9LULyyB6GL"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"a90AZ2jVeR0EGuoI"}
 {"_id":"a9ap5AbkEJmGuOnm"}
 {"FullName":"sdfghfds","image":"","_id":"aCx53yJIvmbkt1t8"}
@@ -285,6 +299,7 @@
 {"FullName":"asdfds","_id":"csO9OAP1ec6u4Nxn"}
 {"FullName":"","_id":"dDJM6PACuW1r7vaS"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"dOfUtCPxOwRR07Br"}
+{"FullName":"fgrfdsd","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-02 at 18.07.35.png","_id":"dPoppV4UsCEI1Ln6"}
 {"_id":"daOwroFWtxH34uec"}
 {"FullName":"furaha","_id":"djrXX964XWiF1Bcu"}
 {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"dnrHiEZQexqtCJ2g"}
@@ -314,7 +329,9 @@
 {"_id":"gkxRnLVBQ5k9ru9C"}
 {"_id":"grAdORR9CE8eAX8F"}
 {"FullName":"sadbnfgds","_id":"grNGb5MPj3hDfaUW"}
+{"FullName":"afdsfghjl","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.51.37.png","_id":"guFFq2wKWnq1qSlO"}
 {"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"gvi7zWUJ9UP44B2k"}
+{"FullName":"qwertyuioiuytrewqe","imageUrl":"http://localhost:3000/images/IMG_1494.JPG","_id":"gy4vErlrprePHJu9"}
 {"_id":"gzmVjrNQToCHqRix"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"h2PWIQULfja0fUE6"}
 {"FullName":"furaha","_id":"h3qOtgEQnm83Kc1C"}
@@ -331,6 +348,7 @@
 {"FullName":"zfghgfd","image":"","_id":"iABE4TswKle8qxp2"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"iDRoAyalN6UXhOAc"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"iEsrBatfcVuWMqfN"}
+{"FullName":"furaha damien","imageUrl":"http://localhost:3000/images/31530099.jpg","_id":"iFRnAB6kx57s24E2"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"iQkWkrEhxgLMmxUC"}
 {"_id":"iSILtot9VRyZS62h"}
 {"FullName":"sdhfhgjkl","image":"","_id":"iWG2ADraQYTXZv1s"}
@@ -350,6 +368,7 @@
 {"FullName":"sgfdghf","_id":"jow0cUqlTq7XopPk"}
 {"_id":"jzy25HnViX2gdxas"}
 {"FullName":"","_id":"k8fBBkeTH3K5Iy0K"}
+{"FullName":"uytrewert","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 13.20.03.png","_id":"khdojzOYh9k0Y2sg"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"knVoSSnA6x7Rj0v4"}
 {"FullName":"sdfghhgfdsdf","image":"","_id":"kz4Dd1L9i5ifc96F"}
 {"FullName":"furhaha","_id":"l8oS8y1SfJ5XVhTe"}
@@ -363,6 +382,7 @@
 {"FullName":"furaha","_id":"lfqB2Blc5PBlcmzm"}
 {"FullName":"","_id":"ltdeAtUG1Olp9el9"}
 {"FullName":"sdfghgf","_id":"lzNT8trck0W7pxll"}
+{"FullName":"AFDSFGHJ","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.56.03.png","_id":"m8HYtWoKXFrtStCG"}
 {"FullName":"sdfghgfds","_id":"mDCYBaGFkjGSs2OT"}
 {"name":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"mERuUzNvfJreHcsa"}
 {"FullName":"","_id":"mJ0yPkJUZQrvLXxZ"}
@@ -381,6 +401,7 @@
 {"FullName":"fffga","_id":"nW5goorWZ2QZkTm1"}
 {"_id":"nZxKDtNw5uZB8b8L"}
 {"FullName":"","_id":"na1tmtzCAc1MnKqE"}
+{"FullName":"sdhgfhj","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"neNzI8ry0O6fjrdq"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"njHQuIOdDRWRhhzL"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"nvDwzxbgVNyBsSFT"}
 {"_id":"nvYyGmdLGJl6oTgq"}
@@ -388,6 +409,7 @@
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"oAO1VPO0ncbPOB0I"}
 {"_id":"oAr9Aj84giREUnLl"}
 {"FullName":"","_id":"oB4cmzZFzeJcmfv6"}
+{"FullName":"furaha damien","imageUrl":"http://localhost:3000/images/31530099.jpg","_id":"oE2QgpdrNJMvbG4M"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"oOyBkxC2HDT4zCw0"}
 {"FullName":"dfghl;lkjhgfds","imageUr":"http://localhost:3000/images/Screen Shot 2019-07-02 at 18.07.35.png","_id":"oVXaTNXbsYSkmFU1"}
 {"FullName":"furaha","imageUrl":{},"_id":"oyU57FDedGr3NsuQ"}
@@ -410,8 +432,10 @@
 {"FullName":"sdfgfds","imageUrl":"","_id":"r6RPhSNCpAg5G2vI"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"r9JB9OuDGeUCuWwM"}
 {"_id":"rQEJIWYxYhAld8KR"}
+{"FullName":"fgrfdsd","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.24.36.png","_id":"rYd7UxW3Lc20uh8U"}
 {"_id":"s5yAbaswvr9RZFAd"}
 {"FullName":"asdfghfds","_id":"sBEbKSiM71TmYL7U"}
+{"FullName":"werthyjuyt","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.45.24.png","_id":"sULB92upN53x7wDl"}
 {"FullName":"","image":"1reelyActive.png","_id":"seb4wdVcyGsJTMcg"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"soPrUX0R6cYiJZkr"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"srAE9or90ygjs9Or"}
@@ -424,6 +448,7 @@
 {"FullName":"","_id":"uB5BZkH9ERgfAWjm"}
 {"stories":{"name":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"uDSq3JY56RrH5WfK"}
 {"story":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}},"_id":"uSy758tQVWqRkTpZ"}
+{"FullName":"dfghfsfdsg","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"uXvG9UZe79uQeBbx"}
 {"name":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"ucRTqzMQAIkEYH4c"}
 {"_id":"undefined/undefined"}
 {"FullName":"sdfghgfd","image":"none","_id":"vB4U5JVrxGrCnzbA"}
@@ -440,6 +465,7 @@
 {"FullName":"dsgfghjk","imageUrl":"http://localhost:3000/images/31530099.jpg","_id":"wPzqkWn4D8KCQSS0"}
 {"FullName":"","image":"1reelyActive.png","_id":"wQKyovdI9Ql3TWzQ"}
 {"name":{"type":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"wZU3bvslK2edgHfa"}
+{"FullName":"fghjl/lujyhtgrf","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.30.39.png","_id":"wmMMhnp00rPbcMex"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"wn3HN7zIUzjgT242"}
 {"FullName":"furaha","_id":"wvREGe52eQpqIqoF"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":"NONE"}},"_id":"wvz3ilepU2QFNEAK"}
@@ -448,6 +474,7 @@
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"xMcXSJxELeJ6yDGe"}
 {"FullName":"sdfgfd","imageUrl":"","_id":"xPFKQe9jQb0r0QzD"}
 {"_id":"xUzfHMti4oDYmG8v"}
+{"FullName":"ffeqdsa","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.45.24.png","_id":"xfBG6OxqhD2ccCeN"}
 {"FullName":"eghjhgfs","image":"Screen Shot 2019-07-02 at 18.07.35.png","_id":"xjqoAuhnNu160qft"}
 {"FullName":"","_id":"xmkqyIIqmYUfnA0i"}
 {"menu":{"id":"file","value":"File","popup":{"menuitem":[{"value":"New","onclick":"CreateNewDoc()"},{"value":"Open","onclick":"OpenDoc()"},{"value":"Close","onclick":"CloseDoc()"}]}},"_id":"xoQUD0u7olPQrXCB"}
@@ -461,3 +488,4 @@
 {"FullName":"","_id":"z7Fc9zmEQm9TSMbA"}
 {"FullName":"sadfghgfdsa","_id":"zGgLXZYGcympu3Wu"}
 {"FullName":"sdfghgfd","image":"1reelyActive.png","_id":"zZJt1xY0TPv3jGE9"}
+{"FullName":"dfghgfds","imageUrl":"http://localhost:3000/images/Screen Shot 2019-07-11 at 12.51.37.png","_id":"1zDxEbNUpieo2ta9"}
